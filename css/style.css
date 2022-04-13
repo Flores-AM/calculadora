@@ -13,6 +13,8 @@ Body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  /* font-family: "PT Sans Narrow", sans-serif; */
 }
 
 .calculadora {
@@ -26,7 +28,7 @@ Body {
   border-radius: 1rem;
 }
 
-.pant {
+.display {
   width: 90%;
   padding: 2rem;
   margin: 5rem auto;
@@ -39,8 +41,9 @@ Body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
+  background-color: rgb(243, 243, 243);
 }
 
 .botones {
@@ -87,6 +90,28 @@ Body {
   transition: 0.1s;
 }
 
+.cht {
+  background-color: rgb(104, 76, 50);
+  color: rgb(104, 76, 50);
+  font-size: 0.5rem;
+}
+.cht:hover {
+  color: rgb(85, 60, 38);
+  background-color: rgb(85, 60, 38);
+  border: 0.1rem solid rgb(255, 255, 255);
+}
+
+.mcn {
+  background-color: rgb(216, 198, 160);
+  color: rgb(216, 198, 160);
+  font-size: 0.5rem;
+}
+.mcn:hover {
+  color: rgb(199, 174, 120);
+  background-color: rgb(199, 174, 120);
+  border: 0.1rem solid rgb(255, 255, 255);
+}
+
 .n0 {
   grid-column: 2/3;
   grid-row: 4/5;
@@ -94,4 +119,20 @@ Body {
 .igual {
   grid-column: 4/5;
   grid-row: 4/5;
+}
+
+@media (max-width: 768px) {
+  .calculadora {
+    width: 100%;
+  }
+  .display {
+    margin: 3rem auto;
+  }
+  .botones {
+    padding: 0;
+  }
+  .num {
+    width: 80%;
+    height: 80%;
+  }
 }
