@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=PT+Sans+Narrow:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <main class="calculadora">
@@ -36,5 +40,19 @@
     </main>
 
     <script src="./js/practica.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      Swal.fire({
+        title: "opa la popa, que copado esto",
+        showClass: {
+          popup: "animate__animated  animate__wobble",
+        },
+        hideClass: {
+          popup: "animate__animated animate__fadeOutUp",
+        },
+      });
+    </script>
   </body>
 </html>

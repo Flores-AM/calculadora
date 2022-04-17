@@ -9,7 +9,7 @@
 // resultado(n1, n2, n3);
 
 // FUNCIONALIDAD
-
+localStorage.setItem("calc", calcular);
 window.addEventListener("load", () => {
   // dos constantes con los elementos que necesitamos
   const display = document.querySelector(".display");
@@ -53,6 +53,7 @@ function calculadora(button, display) {
 
 function calcular(display) {
   display.innerHTML = eval(display.innerHTML);
+  //localStorage.c = localStorage.c + calcular;
 }
 
 function actualizar(display, button) {
