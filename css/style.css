@@ -169,3 +169,31 @@ Body {
     height: 80%;
   }
 }
+
+#hola {
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 1rem;
+  border: 0.1rem solid #000;
+  border-radius: 1rem;
+  background-color: rgb(196, 146, 181);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#hola:hover {
+  background-color: #fff;
+  color: rgb(196, 146, 181);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#respuesta {
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 0;
+  font-weight: bold;
+}
+#respuesta p {
+  margin: 0;
+}
