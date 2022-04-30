@@ -9,7 +9,7 @@ html {
 }
 Body {
   font-size: 16px;
-  height: 100vh;
+  height: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,8 +20,8 @@ Body {
 .calculadora {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  height: 70%;
+  width: 60%;
+  height: 100vh;
   margin: 0 auto;
   background-color: rgb(206, 206, 206);
   border: 0.2rem solid #000;
@@ -56,7 +56,7 @@ Body {
   /* height: 60%; */
   flex: 90%;
   margin: 0 auto;
-  padding: 5rem;
+  padding: 2rem;
   padding-top: 0;
   text-align: center;
 }
@@ -101,7 +101,7 @@ Body {
   transition: transform 0.5s;
 }
 .cht:hover {
-  color: rgb(85, 60, 38);
+  color: rgba(85, 60, 38, 0);
   background-color: rgb(206, 206, 206);
   border: 0.1rem solid rgb(206, 206, 206);
   transform: rotate(360deg);
@@ -157,6 +157,7 @@ Body {
 @media (max-width: 768px) {
   .calculadora {
     width: 100%;
+    height: 100vh;
   }
   .display {
     margin: 3rem auto;
@@ -169,10 +170,34 @@ Body {
     height: 80%;
   }
 }
+@media (max-width: 480px) {
+  .calculadora {
+    height: 50rem;
+  }
+}
 
-#hola {
+/* Respuestas */
+
+hr {
+  width: 50%;
+}
+
+.respuestas {
+  width: 80%;
   margin: 0 auto;
   margin-top: 5rem;
+  height: auto;
+  text-align: center;
+  background-color: rgb(206, 206, 206);
+  border-radius: 2rem;
+}
+
+#chocolate,
+#mani,
+#maicena {
+  width: 12rem;
+  margin: 0 auto;
+  margin-top: 2rem;
   padding: 1rem;
   border: 0.1rem solid #000;
   border-radius: 1rem;
@@ -181,19 +206,19 @@ Body {
   cursor: pointer;
   transition: 0.3s;
 }
-#hola:hover {
+#chocolate:hover,
+#mani:hover,
+#maicena:hover {
   background-color: #fff;
   color: rgb(196, 146, 181);
   transform: scale(1.1);
   transition: 0.3s;
 }
 
-#respuesta {
-  margin: 0 auto;
-  margin-top: 2rem;
+#r-chocolate,
+#r-mani,
+#r-maicena {
+  margin: 2rem auto;
   padding: 0;
   font-weight: bold;
-}
-#respuesta p {
-  margin: 0;
 }

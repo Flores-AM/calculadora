@@ -1,4 +1,4 @@
-let p = document.querySelector("p");
+let p = document.querySelector("#chocolate");
 
 p.addEventListener("click", () => {
   //METODO VIEJO
@@ -52,14 +52,62 @@ p.addEventListener("click", () => {
     });
 });
 
-function mostrarHTML({ nombre, apellido, edad, labura }) {
+function mostrarHTML({ chocolate, mani, maicena }) {
   // const { nombre, apellido, edad } = obj;
 
-  let respuesta = document.querySelector("#respuesta");
+  let respuesta = document.querySelector("#r-chocolate");
 
   respuesta.innerHTML = `
-  <p>${labura}</p>
+  <p>${chocolate}</p>
   `;
 }
 // <p>Apellido: ${apellido}</p>
 // <p>Edad: ${edad}</p>
+
+let mani = document.querySelector("#mani");
+
+mani.addEventListener("click", () => {
+  fetch("./data/datos.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((resJson) => {
+      mostrarHTMLmani(resJson);
+    })
+    .catch((err) => {
+      console.error("no hay respuesta");
+    });
+});
+
+function mostrarHTMLmani({ chocolate, mani, maicena }) {
+  let respuesta = document.querySelector("#r-mani");
+
+  respuesta.innerHTML = `
+  <p>${mani}</p>
+  `;
+}
+
+///////////////////////
+
+let maicena = document.querySelector("#maicena");
+
+maicena.addEventListener("click", () => {
+  fetch("./data/datos.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((resJson) => {
+      mostrarHTMLmaicena(resJson);
+    })
+    .catch((err) => {
+      console.error("no hay respuesta");
+    });
+});
+
+function mostrarHTMLmaicena({ chocolate, mani, maicena }) {
+  let respuesta = document.querySelector("#r-maicena");
+
+  respuesta.innerHTML = `
+  <p>${maicena}</p>
+  `;
+}
